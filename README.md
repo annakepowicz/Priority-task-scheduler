@@ -48,7 +48,7 @@ Make sure you have installed:
   mvn -v
   ```
   
-###2️⃣ Compile the Project
+### 2️⃣ Compile the Project
 Open a terminal in the project root directory (where pom.xml is located) and run:
   ```bash
   mvn clean install
@@ -59,22 +59,27 @@ This will:
 -Compile the project
 -Run all unit tests
 
-###3️⃣ Run the Application
+### 3️⃣ Run the Application
 After building, run the console application using:
   ```bash
   java -cp target/priority-scheduler-1.0-SNAPSHOT.jar app.ConsoleApp
   ```
 
-###🧪 Testing
+---
+
+## 🧪 Testing
 All major functionality—including scheduler logic and the custom heap—is covered with JUnit 5 tests.
 Run tests with:
   ```bash
   mvn test
   ```
 
-###🧱 Project Structure
+---
+
+## 🧱 Project Structure
 This project follows standard Maven directory layout:
 
+  ```bash
 PriorityJobScheduler/
 ├── pom.xml                   # Maven configuration
 └── src/
@@ -88,8 +93,11 @@ PriorityJobScheduler/
     └── test/
         └── java/
             └── tests/        # JUnit 5 tests (SchedulerTest.java)
+  ```
 
-###📌 Summary
+---
+
+## 📌 Summary
 The Priority Job Scheduler demonstrates:
 Clean OOP design
 A fully custom priority management system
