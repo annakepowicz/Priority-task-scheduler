@@ -11,7 +11,7 @@ Its core feature is a custom implementation of a **3-ary Max Heap**, demonstrati
   Includes `BugFix` and `FeatureRequest` classes inheriting from an abstract `Task` base class.
 
 - **Dynamic Prioritization:**  
-  `BugFix` tasks automatically get a priority boost (e.g., +20), ensuring that critical issues are handled before lower-impact tasks.
+  `BugFix` tasks automatically get a priority boost, ensuring that critical issues are handled before lower-impact tasks.
 
 - **Queue Operations:**  
   - `PEEK` – preview the next task without removing it  
@@ -31,11 +31,31 @@ Its core feature is a custom implementation of a **3-ary Max Heap**, demonstrati
 
 ---
 
+## 🧱 Project Structure
+This project follows standard Maven directory layout:
+
+  ```bash
+PriorityJobScheduler/
+├── pom.xml                   # Maven configuration
+└── src/
+    ├── main/
+    │   └── java/
+    │       ├── app/          # Main console application
+    │       ├── logic/        # Scheduler logic (wrapper around the heap)
+    │       ├── model/        # Task, BugFix, FeatureRequest
+    │       ├── exceptions/   # Custom exceptions
+    │       └── structures/   # MaxHeap interface & Array3Heap implementation
+    └── test/
+        └── java/
+            └── tests/        # JUnit 5 tests (SchedulerTest.java)
+  ```
+
+---
+
 ## 🚀 Getting Started (Local Setup)
 
 This project uses Maven for building and dependency management.
 
----
 
 ### 1️⃣ Prerequisites
 
@@ -73,35 +93,3 @@ Run tests with:
   ```bash
   mvn test
   ```
-
----
-
-## 🧱 Project Structure
-This project follows standard Maven directory layout:
-
-  ```bash
-PriorityJobScheduler/
-├── pom.xml                   # Maven configuration
-└── src/
-    ├── main/
-    │   └── java/
-    │       ├── app/          # Main console application
-    │       ├── logic/        # Scheduler logic (wrapper around the heap)
-    │       ├── model/        # Task, BugFix, FeatureRequest
-    │       ├── exceptions/   # Custom exceptions
-    │       └── structures/   # MaxHeap interface & Array3Heap implementation
-    └── test/
-        └── java/
-            └── tests/        # JUnit 5 tests (SchedulerTest.java)
-  ```
-
----
-
-## 📌 Summary
-The Priority Job Scheduler demonstrates:
-Clean OOP design
-A fully custom priority management system
-Robust exception workflow
-Comprehensive unit testing
-Custom-built 3-ary max heap data structure
-Perfect as a learning project or as a demonstration of data-structure-driven task management in Java.
