@@ -22,6 +22,29 @@ Its core feature is a custom implementation of a **3-ary Max Heap**, demonstrati
 
 ---
 
+## 🧠 Data Structure Logic: 3-ary Max Heap
+
+Standard heaps are typically **binary** (2 children per node). This project implements a **3-ary Heap** (d-ary heap where d=3), which offers specific performance trade-offs and structural differences.
+
+### How it works?
+In a 3-ary heap, the tree is **flatter** than a binary heap because each node can hold up to 3 children. This reduces the height of the tree ($\log_3 n$ vs $\log_2 n$).
+
+### Array Representation Logic
+Since the heap is implemented using a flat array, we use specific formulas to navigate relations between nodes:
+
+| Relation | Formula (for index `i`) |
+| :--- | :--- |
+| **Parent** | `(i - 1) / 3` |
+| **Child 1** | `3 * i + 1` |
+| **Child 2** | `3 * i + 2` |
+| **Child 3** | `3 * i + 3` |
+
+### Performance Trade-offs
+- **✅ Faster Insertions (Push):** Due to the lower tree height, "bubbling up" a new element requires fewer comparisons.
+- **⚠️ Slower Deletions (Pop):** "Bubbling down" is slightly more complex, as the algorithm must compare 3 children (instead of 2) to find the largest one to swap with.
+
+---
+
 ## 🛠️ Technology Stack
 
 - **Language:** Java 17+
